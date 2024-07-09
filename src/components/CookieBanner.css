@@ -1,0 +1,123 @@
+.cookie-banner {
+  z-index: 10000;
+  background-color: var(--backgroundColor);
+  padding: 1rem;
+  font-family: inherit;
+  box-sizing: border-box;
+  color: var(--primaryColor);
+
+  h1, h2, h3, h4, h5, h6 {
+    color: var(--accentColor);
+    font-family: inherit;
+    font-size: 1.6rem;
+    margin-bottom: 0;
+    margin-top: 0;
+    box-sizing: border-box;
+  }
+
+  p {
+    font-family: inherit;
+    color: var(--primaryColor);
+    font-size: 1rem;
+    font-weight: normal;
+    box-sizing: border-box;
+  }
+  a {
+    color: var(--accentColor);
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+  }
+  .cookie-banner__button {
+    padding: 1rem 2rem;
+    height: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    outline: none;
+    border: 1px solid var(--accentColor);
+    background: white;
+    color: var(--accentColor);
+    transition: all 0.5s ease;
+
+    &:hover {
+      cursor: pointer;
+      -webkit-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.35);
+      -moz-box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.35);
+      box-shadow: 1px 1px 2px 0px rgba(0,0,0,0.35);
+    }
+  }
+  .cookie-banner__decline-button {
+
+  }
+  .cookie-banner__accept-button {
+    background: var(--accentColor);
+    color: white;
+  }
+
+}
+.cookie-banner--bar {
+  width: 100%;
+  height: auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 2rem 2rem;
+  box-sizing: border-box;
+
+  .cookie-banner__content {
+    width: 60%;
+    box-sizing: border-box;
+    @media (max-width: 768px) {
+      width: 100%;
+    }
+  }
+  .cookie-banner__buttons {
+    width: 30%;
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    box-sizing: border-box;
+    @media (max-width: 768px) {
+      width: 100%;
+      margin-top: 2rem;
+    }
+  }
+}
+.cookie-banner--modal {
+  box-sizing: border-box;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50% ;
+  height: auto;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+
+  .cookie-banner__content {
+    width: 60%;
+    box-sizing: border-box;
+    margin: auto;
+  }
+
+  .cookie-banner__buttons {
+    width: 100%;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    box-sizing: border-box;
+    margin-top: 2rem;
+  }
+}
+
